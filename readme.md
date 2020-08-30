@@ -24,6 +24,6 @@ Voici une petite explication de la signification de certaines variables:
   - `support_category`: est un classement également des support (site où
     les pubs sont affichées).
 ​
-L'objectif est de trouver les probabilités pour la colonne `clicked`,
+  - L'objectif est de trouver les probabilités pour la colonne `clicked`,
 omise à dessein. La réponse au test est le code que vous avez écrit pour
 trouver ces probabilités.

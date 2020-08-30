@@ -18,7 +18,7 @@ st.title('Ads Click-Through Rate (CTR) Prediction')
 'It is a Ads Click-Through Rate (CTR) Prediction, I am working on a binary classification problem in order to identify whether is worth or not a company should spend their money on digital advertising.' 
 
 
-filesize=int(os.popen("wc -l data/test").readline().split()[0])
+filesize=508159
 chunksize=round(filesize/100)
 #@st.cache
 def load_data():

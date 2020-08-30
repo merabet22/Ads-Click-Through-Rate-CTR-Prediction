@@ -27,3 +27,5 @@ Voici une petite explication de la signification de certaines variables:
   - L'objectif est de trouver les probabilités pour la colonne `clicked`,
 omise à dessein. La réponse au test est le code que vous avez écrit pour
 trouver ces probabilités.
+
+Try the application here

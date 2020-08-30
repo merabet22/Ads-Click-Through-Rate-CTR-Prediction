@@ -1,3 +1,9 @@
+# Ads-Click-Through-Rate-CTR-Prediction
+
+## Project Intro/Objective
+In this project, I worked on the analysis of the data about the affected cases by Coronavirus. The datasets are provided by Johns Hopkins Github repository and they are updated daily. 
+The Data Science skills shown are: 
+* Wrangling, transforming and cleaning time-series, Data Visualization. 
 ## Dataset
 ​
 Le fichier comporte une base de `train` et de `test`. Elles comportent
@@ -28,4 +34,40 @@ Voici une petite explication de la signification de certaines variables:
 omise à dessein. La réponse au test est le code que vous avez écrit pour
 trouver ces probabilités.
 
-Try the application here
+### Methods Used
+* Data Wrangling 
+* Timeseries cleaning and merging 
+* Data Visualization
+
+### Technologies
+* Python
+* Pandas, jupyter
+
+## Needs of this project
+
+- data exploration/descriptive statistics
+- data processing/cleaning
+
+## Getting Started
+
+1. Clone this repo to your computer (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+2. Raw Data is being kept [here](https://github.com/DzAnalytics/Ads-Click-Through-Rate-CTR-Prediction/tree/master/data) within this repo.
+
+
+### Install the requirements
+1. Make sure you use Python 3 and Jupyter Notebook.
+2. Install the requirements using pip install -r requirements.txt.
+
+### Usage
+Open Ads-Click-Through-Rate-CTR-Prediction.ipynb using Jupyter Notebook and Run the notebook.
+Or, If you want just show our project without installation. a web page is provided [here](https://ads-ctr-prediction.herokuapp.com/) 
+
+## The Developer
+
+
+|Name     |  Slack Handle   | 
+|---------|-----------------|
+|[Mohamed Merabet](https://github.com/DzAnalytics)| @DzAnalytics       |
+
+
+* Feel free to contact the Developer with any questions or if you are interested in contributing!

@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run <app name>.py
+web: sh setup.sh && streamlit run Ads_Click-Through_Rate_Prediction.py

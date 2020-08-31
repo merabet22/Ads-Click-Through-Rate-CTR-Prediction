@@ -18,7 +18,8 @@ st.title('Ads Click-Through Rate (CTR) Prediction')
 'It is a Ads Click-Through Rate (CTR) Prediction, I am working on a binary classification problem in order to identify whether is worth or not a company should spend their money on digital advertising.' 
 
 
-filesize=int(os.popen("wc -l data/test").readline().split()[0])
+#filesize=int(os.popen("wc -l data/test").readline().split()[0])
+filesize=508159
 chunksize=round(filesize/100)
 #@st.cache
 def load_data():
@@ -35,9 +36,9 @@ data_load_state=st.info('Loading data...')
 chunks=[]
 latest_iteration = st.empty()
 bar= st.progress(0)
-for i in range(1,21):
+for i in range(1,51):
     chunks.append(load_data())
-    bar.progress(i*5)
+    bar.progress(i*2)
     
     
 test = pd.concat([chunk for chunk in chunks])
@@ -55,13 +56,15 @@ if st.checkbox('Show raw data'):
 
 st.write(test.shape)
 
-objects = {'model':np.NaN, 'scaler':np.NaN, 'features':np.NaN, 'hashing_enc':np.NaN }
+
+objects = {'scaler':np.NaN, 'features':np.NaN, 'hashing_enc':np.NaN }
 for o in objects:
     infile = open(o,'rb')
     objects[o] = pickle.load(infile)
     infile.close()
 
-
+model = XGBClassifier({'nthread': 4})  # init model
+model.load_model('model.json')  # load data
 st.write('## Preprocessing ')
 # Add a placeholder
 latest_iteration = st.empty()
@@ -154,10 +157,11 @@ latest_iteration.text('')
 st.success('Done!')
 
 st.write('## Classification ')
-
+st.write(test.columns)
 #Predictive Modeling
-test_new = test[objects['features']]
-y_pred = objects['model'].predict(test_new)
+test = test[objects['features']]
+model._le = LabelEncoder().fit(['0', '1'])
+y_pred = model.predict(test)
 ds['clicked']=y_pred
 st.write('10 first rows')
 st.dataframe(ds[:20])
